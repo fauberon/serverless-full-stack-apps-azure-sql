@@ -10,7 +10,12 @@ on:
       - main
 
 jobs:
-  
+  trace1:
+    runs-on: windows-latest
+    name: trace1
+    steps:
+      - run: echo ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
+
   deploy_database_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: windows-latest
