@@ -7,8 +7,8 @@ env:
   AZURE_FUNCTIONAPP_NAME: catch-the-bus-node   # set this to your application's name
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'azure-function/node'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '14.x'                     # set this to the node version to use (supports 8.x, 10.x, 12.x, 14.x)
-  SCM_DO_BUILD_DURING_DEPLOYMENT: true
-  ENABLE_ORYX_BUILD: true
+  SCM_DO_BUILD_DURING_DEPLOYMENT: false
+  ENABLE_ORYX_BUILD: false
 
 jobs:
   build-and-deploy:
